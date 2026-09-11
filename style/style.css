@@ -1005,3 +1005,191 @@ h1 span {
     .value-grid { grid-template-columns: 1fr; gap: 35px; }
     .about-footer { flex-wrap: wrap; gap: 12px; }
 }
+
+.whatsapp-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    background: #25d366;
+    border-radius: 100%;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.whatsapp-button:hover {
+    color: #fff;
+    background: #1ebe5d;
+    transform: scale(1.08);
+}
+
+:root {
+    --orange: #f47c20;
+    --dark: #17231d;
+    --cream: #f8f5ed;
+    --muted: #687069;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--dark);
+    font-family: "DM Sans", sans-serif;
+}
+
+.layanan-page {
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+.layanan-header {
+    position: relative;
+    padding: 22px 7%;
+    background: rgba(248, 245, 237, 0.95);
+}
+
+.logo {
+    color: inherit;
+    text-decoration: none;
+}
+
+.layanan-header .navbar a {
+    color: var(--dark);
+}
+
+.layanan-header .navbar a.active,
+.layanan-header .navbar a:hover {
+    color: var(--orange);
+}
+
+.layanan-hero {
+    max-width: 850px;
+    margin: 80px auto 55px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.section-label {
+    color: var(--orange);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.layanan-hero h1 {
+    margin: 15px 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.08;
+}
+
+.layanan-hero h1 span {
+    color: var(--orange);
+}
+
+.layanan-hero p {
+    max-width: 580px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.layanan-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+.layanan-card {
+    padding: 32px 25px;
+    background: #fff;
+    border: 1px solid rgba(23, 35, 29, 0.08);
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(23, 35, 29, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.layanan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(23, 35, 29, 0.13);
+}
+
+.layanan-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: #fff;
+    background: var(--orange);
+    border-radius: 18px;
+    font-size: 24px;
+}
+
+.layanan-card h2 {
+    margin: 0 0 14px;
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+}
+
+.layanan-card p {
+    min-height: 95px;
+    margin: 0 0 22px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.layanan-card a {
+    color: var(--orange);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.layanan-card a i {
+    margin-left: 7px;
+    transition: transform 0.2s ease;
+}
+
+.layanan-card a:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 950px) {
+    .layanan-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .layanan-header {
+        padding: 18px 5%;
+    }
+
+    .layanan-hero {
+        margin-top: 55px;
+    }
+
+    .layanan-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .layanan-card p {
+        min-height: auto;
+    }
+}
